@@ -1,0 +1,179 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "test",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "test",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "SLAM",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "SLAM::@145eef247bfb46b6828c",
+					"jsonFile" : "target-SLAM-Debug-04e97724feba08adb1cd.json",
+					"name" : "SLAM",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "featuredetection::@36f028580bb02cc8272a",
+					"jsonFile" : "target-featuredetection-Debug-c333a85d3e3b17c72cfc.json",
+					"name" : "featuredetection",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "intrinsic::@36f028580bb02cc8272a",
+					"jsonFile" : "target-intrinsic-Debug-542485fc18e06c35b276.json",
+					"name" : "intrinsic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ir_sample::@36f028580bb02cc8272a",
+					"jsonFile" : "target-ir_sample-Debug-a3497eb18a43f3529eac.json",
+					"name" : "ir_sample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "pcl_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-pcl_test-Debug-4e7998347733c44ca3d7.json",
+					"name" : "pcl_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "pcl_test2::@36f028580bb02cc8272a",
+					"jsonFile" : "target-pcl_test2-Debug-1afd848492da33c26e93.json",
+					"name" : "pcl_test2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "pnpsolve::@36f028580bb02cc8272a",
+					"jsonFile" : "target-pnpsolve-Debug-813d76b9120ab2849f7f.json",
+					"name" : "pnpsolve",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "realrs::@36f028580bb02cc8272a",
+					"jsonFile" : "target-realrs-Debug-41fe3df1338f4d5644a0.json",
+					"name" : "realrs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-test-Debug-41c4d786b3d14c37942d.json",
+					"name" : "test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "vo::@36f028580bb02cc8272a",
+					"jsonFile" : "target-vo-Debug-6ae1dc6575b1d8f022ae.json",
+					"name" : "vo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "vo_viz::@36f028580bb02cc8272a",
+					"jsonFile" : "target-vo_viz-Debug-ad78858b1d79f22d1990.json",
+					"name" : "vo_viz",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/park/Work/opencv_to_realsense2/test/build",
+		"source" : "/home/park/Work/opencv_to_realsense2/test"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}
