@@ -156,7 +156,7 @@ PointCloud::Ptr joinPointCloud( PointCloud::Ptr original, FRAME& newFrame, Eigen
     PointCloud::Ptr newCloud = image2PointCloud( newFrame.rgb, newFrame.depth, camera );
 
     PointCloud::Ptr output (new PointCloud());
-    pcl::transformPointCloud( *original, *output, T.matrix() );
+    pcl::transformPointCloud( *original, *output, T.matrix() ); // ex)T12*T23 = T13
     *newCloud += *output;
 
     static pcl::VoxelGrid<PointT> voxel;

@@ -127,4 +127,7 @@ cv::Affine3d affine2Mat(cv::Mat &rvec, cv::Mat & tvec);
 cv::Point3f point2dTo3d( cv::Point3f& point, CAMERA_INTRINSIC_PARAMETERS& camera );
 
 PointCloud::Ptr joinPointCloud( PointCloud::Ptr original, FRAME& newFrame, Eigen::Isometry3d T, CAMERA_INTRINSIC_PARAMETERS& camera );
+
+cv::Affine3d affine2Eigen(Eigen::Isometry3d &T);
+
 #endif

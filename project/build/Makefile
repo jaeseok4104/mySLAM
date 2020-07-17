@@ -143,6 +143,19 @@ SLAM/fast:
 .PHONY : SLAM/fast
 
 #=============================================================================
+# Target rules for targets named slamEnd
+
+# Build rule for target.
+slamEnd: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 slamEnd
+.PHONY : slamEnd
+
+# fast build rule for target.
+slamEnd/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/slamEnd.dir/build.make test/CMakeFiles/slamEnd.dir/build
+.PHONY : slamEnd/fast
+
+#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -178,6 +191,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... SLAM"
 	@echo "... run_vo"
+	@echo "... slamEnd"
 	@echo "... test"
 .PHONY : help
 

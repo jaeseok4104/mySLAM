@@ -147,6 +147,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/SLAM.dir/DependInfo.cmake"
+  "test/CMakeFiles/slamEnd.dir/DependInfo.cmake"
   "test/CMakeFiles/test.dir/DependInfo.cmake"
   "test/CMakeFiles/run_vo.dir/DependInfo.cmake"
   )

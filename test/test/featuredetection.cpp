@@ -144,8 +144,8 @@ int main(int argc, char **argv)
         // // cv::Mat R_pos_inv = R_pos.inv();
         // // cv::Mat cameraPose = -R_pos_inv*tvec;
         // cout << "good matches=" << goodMatches.size() << endl;
-        // cv::drawMatches(rgb1, kp1, rgb2, kp2, goodMatches, imgMatches);
-        // cv::imshow("good matches", imgMatches);
+        cv::drawMatches(rgb1, kp1, rgb2, kp2, goodMatches, imgMatches);
+        cv::imshow("good matches", imgMatches);
         // cout << "inliers: " << inliers.rows << endl;
         // cout << "R=" << rvec << endl;
         // cout << "R_pos=" << R_pos << endl;

@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 SET( EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin) 
 SET( LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
-###########################dependencies#######################
+###########################dependencies##########################
 
 find_package(realsense2 REQUIRED)
 include_directories(${realsense2_INCLUDE_DIR})
@@ -19,13 +19,14 @@ FIND_PACKAGE(PCL REQUIRED COMPONENTS common io visualization filters)
 include_directories(${PCL_INCLUDE_DIRS})
 ADD_DEFINITIONS( ${PCL_DEFINITIONS} )
 
-LIST( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
+LIST( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules )
 SET( G2O_ROOT /usr/local/include/g2o )
-FIND_PACKAGE(G2O REQUIRED)
-
-FIND_PACKAGE( CSparse REQUIRED )
+FIND_PACKAGE( G2O REQUIRED)
+# CSparse
+FIND_PACKAGE( CSparse )
 INCLUDE_DIRECTORIES( ${G2O_INCLUDE_DIR} ${CSPARSE_INCLUDE_DIR} )
 #eigen
+
 include_directories( "/usr/include/eigen3/" )
 
 

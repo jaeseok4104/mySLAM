@@ -66,7 +66,8 @@ RESULT_OF_PNP estimateMotion(FRAME & frame1, FRAME & frame2, CAMERA_INTRINSIC_PA
     cout<<"minDis:"<<minDis<<endl;
     for ( size_t i=0; i<matches.size(); i++ )
     {
-        if (matches[i].distance < (good_match_threshold*minDis) + 1)
+        // if (matches[i].distance < (good_match_threshold*minDis) + 1)
+        if (matches[i].distance < minDis)
             goodMatches.push_back( matches[i] );
     }
 
@@ -110,8 +111,6 @@ RESULT_OF_PNP estimateMotion(FRAME & frame1, FRAME & frame2, CAMERA_INTRINSIC_PA
     result.inliers = inliers.rows;
     result.goodMatches = goodMatches;
     cv::Mat imgMatches;
-    cv::drawMatches(frame1.rgb, frame1.kp, frame2.rgb, frame2.kp, goodMatches, imgMatches);
-    cv::imshow("good matches", imgMatches);
 
     return result;
 }
@@ -160,7 +159,18 @@ cv::Affine3d affine2Mat(cv::Mat &rvec, cv::Mat & tvec)
     );
     return M;
 }
-
+cv::Affine3d affine2Eigen(Eigen::Isometry3d &T)
+{
+    cv::Affine3d M(
+        cv::Affine3d::Mat3(
+            T(0,0), T(0,1), T(0,2),
+            T(1,0), T(1,1), T(1,2),
+            T(2,0), T(2,1), T(2,2)),
+        cv::Affine3d::Vec3(
+            T(0,3), T(1,3), T(2,3))
+    );
+    return M;
+}
 PointCloud::Ptr joinPointCloud( PointCloud::Ptr original, FRAME& newFrame, Eigen::Isometry3d T, CAMERA_INTRINSIC_PARAMETERS& camera )
 {
     PointCloud::Ptr newCloud = image2PointCloud( newFrame.rgb, newFrame.depth, camera );

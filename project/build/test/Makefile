@@ -130,6 +130,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test/CMakeFiles/slamEnd.dir/rule:
+	cd /home/park/Work/opencv_to_realsense2/project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/slamEnd.dir/rule
+.PHONY : test/CMakeFiles/slamEnd.dir/rule
+
+# Convenience name for target.
+slamEnd: test/CMakeFiles/slamEnd.dir/rule
+
+.PHONY : slamEnd
+
+# fast build rule for target.
+slamEnd/fast:
+	cd /home/park/Work/opencv_to_realsense2/project/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/slamEnd.dir/build.make test/CMakeFiles/slamEnd.dir/build
+.PHONY : slamEnd/fast
+
+# Convenience name for target.
 test/CMakeFiles/test.dir/rule:
 	cd /home/park/Work/opencv_to_realsense2/project/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/test.dir/rule
 .PHONY : test/CMakeFiles/test.dir/rule
@@ -186,6 +201,33 @@ run_vo.cpp.s:
 	cd /home/park/Work/opencv_to_realsense2/project/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_vo.dir/build.make test/CMakeFiles/run_vo.dir/run_vo.cpp.s
 .PHONY : run_vo.cpp.s
 
+slamEnd.o: slamEnd.cpp.o
+
+.PHONY : slamEnd.o
+
+# target to build an object file
+slamEnd.cpp.o:
+	cd /home/park/Work/opencv_to_realsense2/project/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/slamEnd.dir/build.make test/CMakeFiles/slamEnd.dir/slamEnd.cpp.o
+.PHONY : slamEnd.cpp.o
+
+slamEnd.i: slamEnd.cpp.i
+
+.PHONY : slamEnd.i
+
+# target to preprocess a source file
+slamEnd.cpp.i:
+	cd /home/park/Work/opencv_to_realsense2/project/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/slamEnd.dir/build.make test/CMakeFiles/slamEnd.dir/slamEnd.cpp.i
+.PHONY : slamEnd.cpp.i
+
+slamEnd.s: slamEnd.cpp.s
+
+.PHONY : slamEnd.s
+
+# target to generate assembly for a file
+slamEnd.cpp.s:
+	cd /home/park/Work/opencv_to_realsense2/project/build && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/slamEnd.dir/build.make test/CMakeFiles/slamEnd.dir/slamEnd.cpp.s
+.PHONY : slamEnd.cpp.s
+
 test.o: test.cpp.o
 
 .PHONY : test.o
@@ -222,10 +264,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... run_vo"
+	@echo "... slamEnd"
 	@echo "... test"
 	@echo "... run_vo.o"
 	@echo "... run_vo.i"
 	@echo "... run_vo.s"
+	@echo "... slamEnd.o"
+	@echo "... slamEnd.i"
+	@echo "... slamEnd.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
